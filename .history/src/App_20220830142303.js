@@ -13,7 +13,7 @@ function App() {
   function handleOnSearchChange(searchData) {
   const [lat, lon] =  searchData.value.split(" ")
   const currentWeatherFetch = fetch(
-    `${CURRENT_WEATHER_API_URL}/current.json?q=${lat}%2C${lon}`,
+    `${CURRENT_WEATHER_API_URL}/current.json?q=${lat}%2C${long}`,
     weatherOptions
   );
   const forecastFetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)

@@ -20,19 +20,19 @@ export default function CurrentWeather({ data }) {
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Feels like</span>
-            <span className="parameter-value">{data.current.feelslike_c}°C</span>
+            <span className="parameter-value">{Math.floor(data.main.feels_like)}°C</span>
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Wind</span>
-            <span className="parameter-value">{data.current.wind_kph} kph</span>
+            <span className="parameter-value">{data.wind.speed} m/s</span>
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Humidity</span>
-            <span className="parameter-value">{data.current.humidity}%</span>
+            <span className="parameter-value">{data.main.humidity}%</span>
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Pressure</span>
-            <span className="parameter-value">{data.current.pressure_in} hPa</span>
+            <span className="parameter-value">{Math.ceil(data.main.pressure /100)} hPa</span>
           </div>
         </div>
       </div>
